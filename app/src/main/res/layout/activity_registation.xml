@@ -4,6 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".Registation">
 
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/appCompatEditText"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        tools:ignore="MissingConstraints">
+
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/appCompatEditText2"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:hint="Email Id"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="88dp">
+
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/appCompatEditText3"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="181dp">
+
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/appCompatEditText4"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:hint="confirm password"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="284dp">
+
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/appCompatEditText5"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:hint="mobile number"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="365dp">
+
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:text="Resister"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="533dp">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/registeruser"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+
+
+        android:text="alredy have an coount Login"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="623dp"></androidx.appcompat.widget.AppCompatTextView>
 </androidx.constraintlayout.widget.ConstraintLayout>
