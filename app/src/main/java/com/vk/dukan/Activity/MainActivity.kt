@@ -1,4 +1,4 @@
-package com.vk.dukan
+package com.vk.dukan.Activity
 
 import android.Manifest
 import android.content.Context
@@ -10,9 +10,11 @@ import android.provider.Settings
 import android.telephony.TelephonyManager
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.vk.dukan.R
 import com.vk.dukan.database.SP_Constant
 import com.vk.dukan.model.Login
 import com.vk.dukan.model.LoginResponce
@@ -27,6 +29,8 @@ import retrofit2.Response
 class MainActivity : AppCompatActivity() {
     lateinit var login: Login
     var deviceId: String = ""
+
+    lateinit var tv_register: TextView;
 
     var REQUEST_CODE = 101
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +52,16 @@ class MainActivity : AppCompatActivity() {
             Build.VERSION.RELEASE,
             deviceId);
 
+
+        tv_register = findViewById(R.id.tv_register) as TextView
+        tv_register.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(view: View?) {
+                val intent = Intent(this@MainActivity, Registation::class.java)
+                startActivity(intent)
+
+            }
+
+        })
 
 
         loginbutton.setOnClickListener(View.OnClickListener {

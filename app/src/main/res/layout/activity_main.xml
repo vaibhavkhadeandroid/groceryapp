@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             tools:layout_editor_absoluteY="336dp" />
 
         <TextView
-            android:id="@+id/don_thave_an_accoun_button"
+            android:id="@+id/tv_register"
             android:layout_width="193dp"
             android:layout_height="20dp"
             android:layout_marginTop="58dp"
