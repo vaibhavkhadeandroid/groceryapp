@@ -1,63 +1,197 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/username"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="9dp"
-        android:hint="@string/username"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="295dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn_style"
+            android:fontFamily="@font/arialmt"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputs_constraint_layout"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="336dp" />
 
+        <TextView
+            android:id="@+id/don_thave_an_accoun_button"
+            android:layout_width="193dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="58dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Don't have an account? Sign Up"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/arialmt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginbutton"
+            tools:layout_editor_absoluteX="91dp"
+            tools:layout_editor_absoluteY="440dp" />
 
-    </androidx.appcompat.widget.AppCompatEditText>
+        <TextView
+            android:id="@+id/welcom_back_log_in_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:fontFamily="@font/arialmt"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.5"
+            android:text="@string/welcom_back_log_in_to_continue_with_ronnystudio_ui_for_android"
+            android:textColor="#19224C"
+            android:textSize="20sp"
+            android:singleLine="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inputs_constraint_layout"
+            android:layout_width="295dp"
+            android:layout_height="173dp"
+            android:layout_marginTop="68dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcom_back_log_in_text_view"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="123dp">
 
-        android:layout_margin="10dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="9dp"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
-        tools:ignore="MissingConstraints">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="77dp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
 
+                <TextView
+                    android:id="@+id/email_address_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-1dp"
+                    android:alpha="0.64"
+                    android:gravity="start"
+                    android:lineSpacingMultiplier="1.25"
+                    android:text="Email Address"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="-2dp" />
 
-    </androidx.appcompat.widget.AppCompatEditText>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@drawable/edittext_style"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/email_address_text_view"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="27dp" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/loginbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="106dp"
-        android:text="Login "
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:id="@+id/username"
+                    android:fontFamily="@font/arialmt"
+                    android:background="#00000000"
+                    android:gravity="start|center_vertical"
+                    android:hint="aa@gmail.com"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textColorHint="#D0D1D5"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/email_address_text_view"
+                    tools:layout_editor_absoluteX="20dp"
+                    tools:layout_editor_absoluteY="41dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        tools:ignore="MissingConstraints">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="77dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="96dp">
 
+                <TextView
+                    android:id="@+id/password_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-1dp"
+                    android:alpha="0.64"
+                    android:gravity="start"
+                    android:lineSpacingMultiplier="1.25"
+                    android:text="Password"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="-2dp" />
 
-    </androidx.appcompat.widget.AppCompatButton>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@drawable/edittext_style"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/password_text_view"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="27dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="23dp"
+                    android:background="#00000000"
+                    android:fontFamily="@font/arialmt"
+                    android:gravity="start|center_vertical"
+                    android:hint="12345"
+                    android:id="@+id/password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/password_text_view"
+                    tools:layout_editor_absoluteX="19dp"
+                    tools:layout_editor_absoluteY="48dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
+

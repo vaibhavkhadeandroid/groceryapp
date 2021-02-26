@@ -25,70 +25,52 @@ import retrofit2.Response
 
 
 class MainActivity : AppCompatActivity() {
-   lateinit var login:Login
-      var deviceId: String=""
+    lateinit var login: Login
+    var deviceId: String = ""
 
-    var   REQUEST_CODE =101
+    var REQUEST_CODE = 101
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-
-
-
         val sharedPref = getPreferences(MODE_PRIVATE)
-        val sharedPrefedit =  getPreferences(MODE_PRIVATE).edit()
-      if ( !sharedPref.getBoolean(SP_Constant.islogin.toString(),false)){
-          startActivity(Intent(this,Registation::class.java))
-          finish()
-      }
+        val sharedPrefedit = getPreferences(MODE_PRIVATE).edit()
+//        if (!sharedPref.getBoolean(SP_Constant.islogin.toString(), false)) {
+//            startActivity(Intent(this, Registation::class.java))
+//            finish()
+//        }
         getDeviceInfo()
-        var login=Login("Android", password.text.toString(), username.text.toString(),Build.MODEL,Build.MANUFACTURER,Build.BRAND, Build.VERSION.SDK ,Build.VERSION.RELEASE,deviceId);
+        var login = Login("Android", password.text.toString(), username.text.toString(),
+            Build.MODEL,
+            Build.MANUFACTURER,
+            Build.BRAND,
+            Build.VERSION.SDK,
+            Build.VERSION.RELEASE,
+            deviceId);
 
 
 
         loginbutton.setOnClickListener(View.OnClickListener {
-
             val request = ApiClient.buildService(ApiInterface::class.java)
-
             val call = request.getLogin(login)
             call.enqueue(object : Callback<LoginResponce> {
-                override fun onResponse(
-                    call: Call<LoginResponce>,
-                    response: Response<LoginResponce>
-                ) {
-
+                override fun onResponse(call: Call<LoginResponce>, response: Response<LoginResponce>) {
                     if (response.isSuccessful) {
                         if (response.body()?.status == "sucess") {
                             if (response.body()?.authenticationtoken != null) {
-
                                 Log.e("working....", "" + response.body()?.status.toString())
-                                sharedPrefedit.putString(
-                                    SP_Constant.authentication.toString(),
-                                    response.body()?.authenticationtoken
-                                )
+                                sharedPrefedit.putString(SP_Constant.authentication.toString(), response.body()?.authenticationtoken)
                                 sharedPrefedit.putBoolean(SP_Constant.islogin.toString(), true)
-
                                 sharedPrefedit.apply()
-
                             }
-
                         }
-
                     }
                 }
-
                 override fun onFailure(call: Call<LoginResponce>, t: Throwable) {
                     Log.e("failed", "failed")
                 }
             })
         })
-
-
-
-
     }
 
     private fun getDeviceInfo() {
@@ -115,25 +97,16 @@ class MainActivity : AppCompatActivity() {
                 // performAction(...)
 
 
-
                 deviceId = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                    Settings.Secure.getString(
-                        applicationContext.getContentResolver(),
-                        Settings.Secure.ANDROID_ID
-                    )
+                    Settings.Secure.getString(applicationContext.getContentResolver(), Settings.Secure.ANDROID_ID)
                 } else {
-                    val mTelephony =
-                        applicationContext.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+                    val mTelephony = applicationContext.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
                     if (mTelephony.deviceId != null) {
                         mTelephony.deviceId
                     } else {
-                        Settings.Secure.getString(
-                            applicationContext.getContentResolver(),
-                            Settings.Secure.ANDROID_ID
-                        )
-                    }
+                        Settings.Secure.getString(applicationContext.getContentResolver(), Settings.Secure.ANDROID_ID) }
                 }
-                Log.e("iddd",""+deviceId)
+                Log.e("iddd", "" + deviceId)
 
             }
 //            shouldShowRequestPermissionRationale(...) -> {
@@ -161,7 +134,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>, grantResults: IntArray
@@ -183,7 +155,7 @@ class MainActivity : AppCompatActivity() {
                         val mTelephony =
                             applicationContext.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
                         if (mTelephony.deviceId != null) {
-                           mTelephony.deviceId
+                            mTelephony.deviceId
                         } else {
                             Settings.Secure.getString(
                                 applicationContext.getContentResolver(),
@@ -192,7 +164,7 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
 
-                    Log.e("iddd",""+deviceId)
+                    Log.e("iddd", "" + deviceId)
                     // in your app.
                 } else {
                     // Explain to the user that the feature is unavailable because

@@ -18,5 +18,5 @@
     <string name="host">HOST: </string>
     <string name="fingerprint">FINGERPRINT: </string>
     <string name="versioncode">VERSION CODE: </string>
-
+    <string name="welcom_back_log_in_to_continue_with_ronnystudio_ui_for_android">Welcom back. Log in to continue</string>
 </resources>
