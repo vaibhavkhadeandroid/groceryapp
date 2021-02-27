@@ -16,7 +16,7 @@ class SlidingImageFragment : Fragment(R.layout.fragment_sliding) {
 
         fun getInstance(position: Int): Fragment {
 
-          
+
             val fragment = SlidingImageFragment()
             val bundle = Bundle()
             bundle.putInt(ARG_POSITION, position)

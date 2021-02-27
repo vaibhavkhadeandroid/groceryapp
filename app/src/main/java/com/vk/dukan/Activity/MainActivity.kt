@@ -10,9 +10,11 @@ import android.provider.Settings
 import android.telephony.TelephonyManager
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.vk.dukan.Activity.Registation
 import com.vk.dukan.database.SP_Constant
 import com.vk.dukan.model.Login
 import com.vk.dukan.model.LoginResponce
@@ -42,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 //            finish()
 //        }
         getDeviceInfo()
-        var login = Login("Android", password.text.toString(), username.text.toString(),
+        var login = Login("Android", "bbbb", "aaaa",
             Build.MODEL,
             Build.MANUFACTURER,
             Build.BRAND,
@@ -75,6 +77,7 @@ class MainActivity : AppCompatActivity() {
                                 sharedPrefedit.putBoolean(SP_Constant.islogin.toString(), true)
 
                                 sharedPrefedit.apply()
+                                startActivity(Intent(this@MainActivity,HomeActivity::class.java))
 
                             }
 
