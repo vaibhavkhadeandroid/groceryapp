@@ -1,11 +1,10 @@
-package com.vk.dukan
+package com.vk.dukan.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.vk.dukan.database.SP_Constant
-import com.vk.dukan.model.LoginResponce
+import com.vk.dukan.R
 import com.vk.dukan.model.RegistationPojo
 import com.vk.dukan.model.RegistationResponce
 import com.vk.dukan.network.ApiClient
