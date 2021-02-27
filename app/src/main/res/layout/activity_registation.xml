@@ -9,9 +9,12 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/appCompatEditText"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
 
@@ -20,22 +23,28 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/appCompatEditText2"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
         android:hint="Email Id"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="88dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
 
     </androidx.appcompat.widget.AppCompatEditText>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/appCompatEditText3"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:hint="password"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="181dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText2"
+        tools:ignore="MissingConstraints">
 
 
     </androidx.appcompat.widget.AppCompatEditText>
@@ -43,45 +52,56 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/appCompatEditText4"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
         android:hint="confirm password"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="284dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText3"
+        tools:ignore="MissingConstraints">
 
 
     </androidx.appcompat.widget.AppCompatEditText>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/appCompatEditText5"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         android:hint="mobile number"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="365dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText4"
+        tools:ignore="MissingConstraints">
 
 
     </androidx.appcompat.widget.AppCompatEditText>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Resister"
+        android:layout_marginBottom="42dp"
 
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="533dp">
+        android:text="Resister"
+        app:layout_constraintBottom_toTopOf="@+id/registeruser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
 
     </androidx.appcompat.widget.AppCompatButton>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/registeruser"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
 
+        android:layout_marginBottom="89dp"
         android:text="alredy have an coount Login"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="623dp"></androidx.appcompat.widget.AppCompatTextView>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"></androidx.appcompat.widget.AppCompatTextView>
 </androidx.constraintlayout.widget.ConstraintLayout>

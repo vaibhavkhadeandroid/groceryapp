@@ -40,10 +40,15 @@ class MainActivity : AppCompatActivity() {
 
         val sharedPref = getPreferences(MODE_PRIVATE)
         val sharedPrefedit =  getPreferences(MODE_PRIVATE).edit()
-      if ( !sharedPref.getBoolean(SP_Constant.islogin.toString(),false)){
-          startActivity(Intent(this,Registation::class.java))
-          finish()
-      }
+//      if ( !sharedPref.getBoolean(SP_Constant.islogin.toString(),false)){
+//          startActivity(Intent(this,Registation::class.java))
+//          finish()
+//      }
+
+        if ( true){
+            startActivity(Intent(this,HomeActivity::class.java))
+            finish()
+        }
         getDeviceInfo()
         var login=Login("Android", password.text.toString(), username.text.toString(),Build.MODEL,Build.MANUFACTURER,Build.BRAND, Build.VERSION.SDK ,Build.VERSION.RELEASE,deviceId);
 
