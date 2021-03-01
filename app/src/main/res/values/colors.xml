@@ -10,4 +10,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray_demo">#333</color>
+    <color name="web_site_button_color">#367FA9</color>
+
 </resources>

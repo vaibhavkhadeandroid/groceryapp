@@ -30,5 +30,7 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
-    <string name="welcom_back_log_in_to_continue_with_ronnystudio_ui_for_android">Welcom back. Log in to continue</string>
-</resources>
+    <string name="welcom">Welcom back. Log in to continue</string>
+    <string name="login">Sign In</string>
+    <string name="newuser">New User? Create Account</string>
+    <string name="register">Register</string></resources>
